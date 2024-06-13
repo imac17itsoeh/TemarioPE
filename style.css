@@ -1,0 +1,42 @@
+body {
+    margin: 200px; /* Margen exterior */
+    padding: 0;
+    background-color: white; /* Color de fondo */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    font-size: 50px; /* Tamaño de fuente base */
+    color: #333333; /* Color de texto */
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-size: 90px; /* Tamaño de fuente */
+    color: #3b3f49; /* Color de texto */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+h2 {
+    font-size: 75px; /* Tamaño de fuente */
+    color: #f7a29e; /* Color de texto */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+h3 {
+    font-size: 60px; /* Tamaño de fuente */
+    color: #f3c6b9 ;/* Color de texto */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para el párrafo */
+p {
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilos para la lista */
+ul {
+    
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px; /* Margen inferior */
+}
