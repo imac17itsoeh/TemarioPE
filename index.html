@@ -142,5 +142,123 @@
     <h3>Interpretación de histogramas</h3>
     <p>Los histogramas se pueden utilizar para interpretar la distribución de los datos. Por ejemplo, un histograma simétrico indica que los datos están distribuidos uniformemente alrededor de la media. Un histograma asimétrico a la derecha indica que los datos están concentrados en la parte izquierda del gráfico, mientras que un histograma asimétrico a la izquierda indica que los datos están concentrados en la parte derecha del gráfico. Un histograma con dos o más picos indica que los datos son multimodales.</p>
     <p>Los histogramas son una herramienta útil para explorar y visualizar datos. Se pueden utilizar para identificar patrones, tendencias y anomalías en los datos.</p>
+
+
+
+
+
+
+    <h1>2 Fundamentos de la Teoria de Probabilidad</h1>
+
+    <h2>2.1 Técnicas de Conteo</h2>
+    <p>Las técnicas de conteo son herramientas matemáticas que permiten determinar el número de resultados posibles en situaciones que involucran la elección o disposición de elementos. Estas técnicas son fundamentales en áreas como la probabilidad, la estadística y la combinatoria.</p>
+    <h3>2.1.1 Principio aditivo</h3>
+    <p>El principio aditivo establece que si hay n maneras de realizar una acción y m maneras de realizar otra acción, entonces hay n + m maneras de realizar ambas acciones de forma independiente. En otras palabras, si A y B son eventos disjuntos (no pueden ocurrir al mismo tiempo), entonces la probabilidad de que ocurra A o B es la suma de sus probabilidades individuales:</p>
+    <p>P(A o B) = P(A) + P(B)    </p>
+    <p>Ejemplo: Supongamos que una persona debe elegir entre dos restaurantes para cenar: un restaurante italiano y un restaurante chino. Si hay 5 opciones de platos en el restaurante italiano y 7 opciones de platos en el restaurante chino, ¿cuántas opciones de plato tiene la persona en total?</p>
+    <p> Solución: Aplicando el principio aditivo, la persona tiene 5 + 7 = 12 opciones de plato en total.</p>
+    <h3>2.1.2 Principio multiplicativo</h3>
+    <p>El principio multiplicativo establece que si hay n maneras de realizar una acción y luego hay m maneras de realizar otra acción dependiente de la primera, entonces hay n * m maneras de realizar ambas acciones en conjunto. En otras palabras, si A y B son eventos dependientes (la ocurrencia de uno afecta la probabilidad del otro), entonces la probabilidad de que ocurran A y B es la probabilidad de A multiplicada por la probabilidad de B dado que A ya ha ocurrido:</p>
+    <p>P(A y B) = P(A) * P(B | A)</p>
+    <h3>2.1.3 Notación Factorial</h3>
+    <p>La notación factorial se utiliza para representar el producto de una secuencia de números enteros positivos consecutivos. El factorial de n, que se denota como n!, se define como:</p>
+    <p>n! = n * (n - 1) * (n - 2) * ... * 2 * 1</p>
+    <p>Por ejemplo, 5! = 5 * 4 * 3 * 2 * 1 = 120.</p>
+    <p>La notación factorial es especialmente útil en el contexto de las permutaciones y combinaciones.</p>
+    <h3>2.1.4 Permutaciones</h3>
+    <p>La permutación es una técnica de conteo que permite calcular las posibles ordenaciones de los elementos de un conjunto o número de elementos del espacio muestral de un experimento aleatorio. En esta técnica de conteo se considera que existe el orden en la muestra, pero no es posible repetir ningún elemento de la población en su conformación. Se puede calcular utilizando la siguiente fórmula:</p>
+    <p>nPr=(n!)/(n-r)!</p>
+    <h3>2.1.5 Combinaciones</h3>
+    <p>Una combinación es una selección de k elementos de un conjunto de n elementos, sin importar el orden en que se seleccionen. El número de combinaciones de n elementos tomados de k en k se denota como nCk y se puede calcular utilizando la siguiente fórmula:</p>
+    <p>nCk = n! / (k! * (n - k)!)</p>
+    <h3>2.1.6 Diagrama de Árbol</h3>
+    <p>Un diagrama de árbol es una herramienta visual que se utiliza para representar las diferentes posibilidades en situaciones que involucran decisiones sucesivas. Cada rama del árbol representa una elección, y las probabilidades se pueden asignar a cada rama.</p>
+    <h3>2.1.7 Teorema del Binomio</h3>
+    <p>El Teorema del Binomio, también conocido como Binomio de Newton, es una fórmula matemática que describe cómo se expande la potencia "n" de un binomio (una expresión con dos términos). La fórmula se expresa como:</p>
+    <p>(a + b)^n = Σ(k=0; n) (nCk) * a^(n-k) * b^k</p>
+    <p>Donde:</p>
+    <ul>
+        <li>(a + b)<sup>n</sup> representa el binomio "a + b" elevado a la potencia "n".</li>
+        <li>Σ indica una sumatoria, lo que significa que la expresión representa la suma de todos los términos que se obtienen al expandir el binomio.</li>
+        <li>(nCk) es el coeficiente binomial de "n" elegir "k", que se calcula como n! / (k! * (n-k)!). Este coeficiente determina el número de veces que aparece cada término en la expansión.</li>
+        <li>a<sup>(n-k)</sup> representa "a" elevado a la potencia "n-k". Esta potencia indica la contribución de "a" en cada término de la expansión.</li>
+        <li>b<sup>k</sup> representa "b" elevado a la potencia "k". Esta potencia indica la contribución de "b" en cada término de la expansión.</li>
+      </ul>
+
+    <h2>2.2 Teoría elemental de probabilidad</h2>
+    <p>La teoría elemental de la probabilidad se basa en conceptos básicos para cuantificar la probabilidad de que ocurra un evento en un experimento aleatorio. Se define la probabilidad de un evento "A" como la razón entre el número de resultados favorables a "A" y el número total de resultados posibles en el espacio muestral. Matemáticamente, se expresa como:</p>
+    <p>P(A) = n(A) / n(S)</p>
+    <p>Donde:</p>
+    <ul>
+        <li>P(A) representa la probabilidad del evento "A".</li>
+        <li>n(A) es el número de resultados favorables a "A".</li>>
+        <li>n(S) es el número total de resultados posibles en el espacio muestral "S".</li>
+      </ul>
+    <h3>Propiedades básicas de la probabilidad:</h3>
+    <ul>
+          <li>0 ≤ P(A) ≤ 1: La probabilidad de cualquier evento debe estar entre 0 y 1. Un valor de 0 indica que el evento es imposible, mientras que 1 indica que es seguro que ocurra.</li>
+          <li>P(S) = 1: La probabilidad del espacio muestral completo siempre es 1.</li>
+          <li>Si A y B son eventos mutuamente excluyentes, entonces P(A ∪ B) = P(A) + P(B). Eventos mutuamente excluyentes son aquellos que no pueden ocurrir simultáneamente. La unión (∪) representa la probabilidad de que ocurra al menos uno de los eventos.</li>
+          <li>Si A y B son eventos independientes, entonces P(A ∩ B) = P(A) * P(B). Eventos independientes son aquellos en los que la ocurrencia de uno no afecta la probabilidad del otro. La intersección (∩) representa la probabilidad de que ocurran ambos eventos simultáneamente.</li>
+    </ul>
+    <h2>2.3 Probabilidad de Eventos: Definición de espacio muestral, definición de evento, simbología, unión, intersección, diagramas de Venn.</h2>
+    <h3>Definición de espacio muestral</h3>
+    <p>El espacio muestral, denotado por Ω, es el conjunto que contiene todos los resultados posibles de un experimento aleatorio. En otras palabras, es la colección completa de todos los eventos que pueden ocurrir. Cada resultado en el espacio muestral se llama evento elemental.</p>
+    <p>Ejemplo: Si lanzamos una moneda, el espacio muestral Ω sería {cara, cruz}.</p>
+    <h3>Definición de evento</h3>
+    <p>Un evento es un subconjunto del espacio muestral. Es un conjunto de resultados posibles que nos interesa considerar. Puede ser un solo resultado elemental o una combinación de ellos.</p>
+    <p>Ejemplo: Si lanzamos una moneda, el evento "obtener cara" sería {cara}.</p>
+    <h3>Simbología</h3>
+    <ul>
+        <li>Ω: Espacio muestral</li>
+        <li>A: Evento</li>
+        <li>A̅: Complemento de A (conjunto de resultados en Ω que no están en A)</li>
+        <li>A ∪ B: Unión de A y B (conjunto de resultados que están en A o en B o en ambos)</li>
+        <li>A ∩ B: Intersección de A y B (conjunto de resultados que están en A y en B)</li>
+    </ul>
+    <h3>Diagrama de Venn</h3>
+    <p>Un diagrama de Venn es una representación gráfica de dos o más eventos. Los eventos se representan por círculos o regiones, y la superposición de las regiones indica la intersección de los eventos.</p>
+    
+    <h2>2.4 Probabilidad con Técnicas de Conteo: Axiomas, Teoremas</h2>
+    <h3>Axiomas</h3>
+    <p>Los axiomas de la probabilidad son principios básicos que definen las propiedades de la probabilidad. Los tres axiomas principales son:</p>
+    <ul>
+        <li>No negatividad: P(A) ≥ 0 para todo evento A.        </li>
+        <li>Certeza: P(Ω) = 1.        </li>
+        <li>Ley de la aditividad: Si A y B son eventos mutuamente excluyentes (no tienen resultados en común), entonces P(A ∪ B) = P(A) + P(B).</li>
+    </ul>
+    <h3>Teoremas</h3>
+    <p>Existen varios teoremas importantes en probabilidad con técnicas de conteo, como:</p>
+    <ul>
+        <li>Teorema de la multiplicación: Si un experimento se compone de n pasos sucesivos e independientes, la probabilidad de un resultado específico es el producto de las probabilidades de cada paso individual.</li>
+        <li>Permutaciones: El número de formas de ordenar n objetos distintos es n!.        </li>
+        <li>El número de formas de seleccionar k objetos de un conjunto de n objetos distintos sin importar el orden es nCk = n! / (k!(n - k)!).</li>
+    </ul>
+    
+    <h2>2.5 Probabilidad condicional: Dependiente, Independiente</h2>
+    <h3>Dependiente</h3>
+    <p>Dos eventos A y B se consideran dependientes si la probabilidad de uno afecta la probabilidad del otro. En otras palabras, si saber que ha ocurrido A cambia la probabilidad de que ocurra B.
+
+        Ejemplo: Sacar dos cartas de una baraja sin reponer. La probabilidad de sacar un rey en la segunda carta depende de si el rey se sacó en la primera carta.</p>
+    
+    <h3>Independiente</h3>
+    <p>Dos eventos A y B se consideran independientes si la probabilidad de uno no afecta la probabilidad del otro. En otras palabras, saber que ha ocurrido A no cambia la probabilidad de que ocurra B.
+
+        Ejemplo: Lanzar dos monedas. La probabilidad de obtener cara en la segunda moneda es la misma independientemente de si se obtuvo cara o cruz en la primera moneda.</p>
+   
+    <h2>2.6 Ley multiplicativa</h2>
+    <p>La ley multiplicativa establece que la probabilidad de que ocurran dos eventos independientes A y B es el producto de sus probabilidades individuales:    </p>
+    <p>P(A ∩ B) = P(A) * P(B)    </p>
+
+    <h2>2.7 Eventos independientes: Regla de Bayes</h2>
+    <p>La regla de Bayes es un teorema que permite calcular la probabilidad condicional de un evento A sabiendo que ha ocurrido otro evento B, cuando los eventos son independientes. Se expresa como:</p>
+    <p>P(A | B) = (P(B | A) * P(A)) / P(B)</p>
+    <ul>
+        <li>P(B | A) es la probabilidad condicional de B dado A, es decir, la probabilidad de que ocurra B sabiendo que ya ha ocurrido A.</li>
+        <li>P(B) es la probabilidad marginal de B, es decir, la probabilidad de que ocurra B sin tener en cuenta si ha ocurrido A o no.</li>
+    </ul>
+
+
+</body>
 </body> 
 </html>
