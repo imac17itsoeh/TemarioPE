@@ -257,8 +257,49 @@
         <li>P(B | A) es la probabilidad condicional de B dado A, es decir, la probabilidad de que ocurra B sabiendo que ya ha ocurrido A.</li>
         <li>P(B) es la probabilidad marginal de B, es decir, la probabilidad de que ocurra B sin tener en cuenta si ha ocurrido A o no.</li>
     </ul>
+    
+    
+    
+    
+    <h1>3 Variables Aleatorias</h1>
+    <h2>3.1 Variables aleatorias discretas</h2>
+    <h3>3.1.1 Distribución de probabilidad en forma general</h3>
+    <p>Una variable aleatoria discreta X se define por su función de probabilidad, P(x), que asigna a cada valor posible x de X una probabilidad P(x)≥0, de tal manera que ∑ x∈X P(x)=1, donde X es el conjunto de valores posibles de X.</p>
+    <p>La función de probabilidad P(x) puede representarse mediante una tabla de frecuencias o una gráfica de barras.</p>
+    <h3>3.1.2 Valor esperado</h3>
+    <p>La media o valor esperado es una medida de localización central de la variable aleatoria. Se calcula de la manera siguiente:</p>
+    <img src="valorEsperado.png" class="imagenesFormulas">
+    <p>es decir, es un promedio ponderado de los valores que toma la variable aleatoria (Xi ), donde las ponderaciones (o pesos) son las probabilidades [P(Xi )].</p>
+    <h3>3.1.3 Variancia, desviación estándar</h3>
+    <p>La varianza y la desviación estándar son medidas de dispersión o variabilidad de la variable aleatoria. La primera se calcula de la siguiente manera:</p>
+    <img src="varianza.png" class="imagenesFormulas">
+    <p>En otras palabras, es el promedio ponderado de las distancias al cuadrado de cada valor de la variable aleatoria respecto a su media. Esto indica cuán alejados están los valores en relación con la media. Se eleva al cuadrado para hacer más evidente esa distancia (variabilidad). También puede calcularse así:</p>
+    <img src="varianza2.png" class="imagenesFormulas">
+    <p>Como el resultado de la varianza se expresa en unidades al cuadrado, determinamos la desviación estándar calculando sólo la raíz cuadrada de la varianza.</p>
+    <h3>3.1.4 Función acumulada</h3>
+    <p>a función acumulada de una variable aleatoria discreta representa la probabilidad de que la variable tome un valor menor o igual a un valor específico x. Se define como:</p>
+    <img src="funcionAcumulada.png" class="imagenesFormulas">
+    <p>La función acumulada es una función no decreciente que va de 0 a 1.    </p>
 
+
+    <h2>3.2 Variables aleatorias Continuas</h2>
+    <h3>3.2.1 Distribución de probabilidad en forma general</h3>
+    <h3>3.2.2 Valor esperado</h3>
+    <p>Es una medida de localización central de la variable aleatoria. Se calcula de la forma siguiente:</p>
+    <img src="valorEsperadoContinuas.png" class="imagenesFormulas">
+    <h3>3.2.3 Variancia, desviación estándar</h3>
+    <p>Son medidas de dispersión o variabilidad de la variable aleatoria. Se calculan de esta  manera:</p>
+    <img src="varianzaContinuas.png" class="imagenesFormulas">
+    <p>Cabe recordar que la varianza también puede calcularse así:</p>
+    <img src="varianza continuas2.png" class="imagenesFormulas">
+    <p>De este modo determinamos la desviación estándar calculando únicamente la raíz cuadrada de la varianza.</p>
+    <h3>3.2.4 Función acumulada</h3>
+    <p>La función acumulada de una variable aleatoria continua representa la probabilidad de que la variable tome un valor menor o igual a un valor específico x. Se define como:</p>
+    <img src="funcionAcumuladaContinuas.png" class="imagenesFormulas">
+    <p>La función acumulada es una función no decreciente que va de 0 a 1.</p>
+    <h3>3.2.5 Cálculos de probabilidad</h3>
+    <p>Para calcular probabilidades relacionadas con una variable aleatoria continua, se utiliza la función acumulada. Por ejemplo, para calcular la probabilidad de que la variable aleatoria X tome un valor entre a y b, se utiliza la siguiente fórmula:</p>
+    <img src="CalculosDeProb.png" class="imagenesFormulas">
 
 </body>
-</body> 
-</html>
+</html> 
