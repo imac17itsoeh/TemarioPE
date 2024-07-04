@@ -310,14 +310,123 @@
 
 
     <h1>4 Distribuciones de Probabilidad</h1>
+    <p>En el ámbito de la probabilidad y la estadística, las distribuciones de probabilidad desempeñan un papel fundamental para modelar el comportamiento de variables aleatorias en diversos contextos. Estas distribuciones permiten cuantificar la probabilidad de que una variable aleatoria tome un valor específico o se encuentre dentro de un intervalo particular. A continuación, se presenta una descripción más detallada de algunas de las distribuciones de probabilidad más comunes, adoptando un estilo técnico y formal:</p>
     <h2>4.1 Función de probabilidad </h2>
+    <p>La función de probabilidad es una función matemática que asigna a cada valor posible de una variable aleatoria X su probabilidad de ocurrencia. Se representa con la notación P(X = x) o f(x) para una variable discreta, y con F(x) para una variable continua. La función de probabilidad debe cumplir las siguientes propiedades:</p>
+    <ul>
+        <li>P(X ≤ a) ≤ 1 para todo valor real a.</li>
+        <li>Si X es discreta, entonces P(X = x) ≥ 0 para todo valor posible de x.</li>
+        <li>Si X es continua, entonces F(x) es no decreciente y F(a) = 0 para todo a < mínimo valor posible de X.</li>
+        <li>Si X es continua, entonces F(b) = 1 para todo b > máximo valor posible de X.</li>
+    </ul>
+    <p>La función de probabilidad es fundamental para calcular probabilidades de eventos relacionados con la variable aleatoria X.</p>
     <h2>4.2 Distribución binomial</h2>
+    <p>La distribución binomial describe la probabilidad de obtener un número específico de "éxitos" en n experimentos independientes, donde cada experimento tiene la misma probabilidad de éxito p. Se utiliza cuando:</p>
+    <ul>
+        <li>La variable aleatoria X representa el número de éxitos.</li>
+        <li>X es discreta con valores posibles 0, 1, 2, ..., n.</li>
+        <li>Los experimentos son independientes.</li>
+        <li>La probabilidad de éxito en cada experimento es la misma (p).</li>
+    </ul>
+    <p>La función de probabilidad de la distribución binomial para X = k éxitos en n experimentos es:</p>
+    <p>P(X = k) = nCk * p^k * (1-p)^(n-k)</p>
+    <p>Donde:</p><ul>
+        <li>nCk es el número de combinaciones de n elementos tomados de k en k.</li>
+        <li>p es la probabilidad de éxito en cada experimento.</li>
+        <li>(1-p) es la probabilidad de fracaso en cada experimento.</li>
+    </ul>
     <h2>4.3 Distribución hipergeométrica</h2>
+    <p>La distribución hipergeométrica describe la probabilidad de obtener un número específico de "éxitos" en n experimentos sin reemplazo, donde la población inicial tiene N elementos, de los cuales K son éxitos. Se utiliza cuando:</p>
+    <ul>
+        <li>La variable aleatoria X representa el número de éxitos en la muestra.</li>
+        <li>X es discreta con valores posibles 0, 1, 2, ..., min(n, K).</li>
+        <li>Los experimentos son sin reemplazo.</li>
+        <li>La población inicial es finita y conocida (N elementos).</li>
+        <li>La probabilidad de éxito en cada experimento no es constante (depende del número de éxitos restantes en la población).</li>
+    </ul>
+    <p>La función de probabilidad de la distribución hipergeométrica para X = k éxitos en una muestra de n elementos es:</p>
+    <p>P(X = k) = (K choose k) * (N-K choose n-k) / (N choose n)</p>
+    <ul>
+        <li>(K choose k) es el número de combinaciones de K elementos tomados de k en k.</li>
+        <li>(N-K choose n-k) es el número de combinaciones de N-K elementos tomados de n-k en n-k.</li>
+        <li>(N choose n) es el número de combinaciones de N elementos tomados de n en n.</li>
+    </ul>
     <h2>4.4 Distribución de Poisson</h2>
+    <p>La distribución de Poisson describe la probabilidad de observar un número específico de eventos en un intervalo de tiempo fijo, suponiendo que los eventos ocurren de forma independiente y con una tasa constante. Se utiliza cuando:</p>
+    <ul>
+        <li>La variable aleatoria X representa el número de eventos en un intervalo de tiempo fijo.</li>
+        <li>X es discreta con valores posibles 0, 1, 2, ...</li>
+        <li>Los eventos ocurren de forma independiente.</li>
+        <li>La tasa de eventos (λ) es constante en el intervalo de tiempo.</li>
+    </ul>
+    <p>La función de probabilidad de la distribución de Poisson para X = k eventos en un intervalo de tiempo con tasa λ es:</p>
+    <p>P(X = k) = (e^(-λ) * λ^k) / k!</p>
+    <ul>
+        <li>e es la base del logaritmo natural (aproximadamente 2.718).</li>
+        <li>λ es la tasa de eventos en el intervalo de tiempo.</li>
+        <li>k! es el factorial de k (k * (k-1) * (k-2) * ... * 1).</li>
+    </ul>
     <h2>4.5 Distribución normal</h2>
+    <p>La distribución normal, también conocida como distribución gaussiana, describe la probabilidad de que una variable aleatoria continua X tome un valor dentro de un intervalo específico. Se caracteriza por su media (μ) y su desviación estándar (σ).</p>
+    <p>Propiedades:</p>
+    <ul>
+        <li>La curva de densidad de probabilidad es simétrica alrededor de la media (μ).</li>
+        <li>El 68% de los datos se encuentran dentro de un intervalo de 1 desviación estándar (μ ± σ) de la media.</li>
+        <li>El 95% de los datos se encuentran dentro de un intervalo de 2 desviaciones estándar (μ ± 2σ) de la media.</li>
+        <li>El 99.7% de los datos se encuentran dentro de un intervalo de 3 desviaciones estándar (μ ± 3σ) de la media.</li>
+    </ul>
+    <p>Aplicaciones:</p>
+    <ul>
+        <li>Análisis de experimentos científicos donde se espera que los datos se distribuyan simétricamente alrededor de un valor central.</li>
+        <li>Modelado de fenómenos naturales y sociales que presentan variabilidad aleatoria.</li>
+        <li>Inferencia estadística: Estimación de parámetros poblacionales y realización de pruebas de hipótesis.</li>
+    </ul>
+    <p><strong> Ejemplo:</strong> Medir la altura de 100 estudiantes y analizar si la distribución de las alturas se ajusta a una distribución normal.</p>
     <h2>4.6 Distribución T-student</h2>
+    <p>La distribución t-student es similar a la distribución normal, pero se utiliza cuando el tamaño de la muestra es pequeño y la desviación estándar poblacional (σ) es desconocida. Se caracteriza por su grados de libertad (ν) y un parámetro de ubicación (μ).</p>
+    <p>Propiedades:</p>
+    <ul>
+        <li>La forma de la distribución depende de los grados de libertad (ν).</li>
+        <li>Para grados de libertad altos, se aproxima a la distribución normal.</li>
+        <li>Se utiliza para realizar inferencia estadística cuando la σ es desconocida y el tamaño de la muestra es pequeño.</li>
+    </ul>
+    <p>Aplicaciones:</p>
+    <ul>
+        <li>Análisis de experimentos donde el tamaño de la muestra es limitado.</li>
+        <li>Estimación de la media poblacional cuando la σ es desconocida.</li>
+        <li>Realización de pruebas de hipótesis sobre la media poblacional.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong> Comparar la media de las calificaciones en matemáticas de dos grupos de estudiantes con tamaños de muestra pequeños.</p>
     <h2>4.7 Distribución Chi cuadrada</h2>
+    <p>La distribución chi-cuadrada (χ²) se utiliza para analizar la independencia entre dos variables categóricas. Se caracteriza por sus grados de libertad (ν).</p>
+    <p>Propiedades:</p>
+    <ul>
+        <li>La curva de densidad de probabilidad es asimétrica a la derecha.</li>
+        <li>No existe un valor máximo para la distribución.</li>
+        <li>Se utiliza para realizar pruebas de hipótesis sobre la independencia entre dos variables categóricas.</li>
+    </ul>
+    <p>Aplicaciones:</p>
+    <ul>
+        <li>Análisis de tablas de contingencia para verificar si existe asociación entre dos variables categóricas.</li>
+        <li>Evaluación de la bondad de ajuste de un modelo de distribución de probabilidad a datos observados.</li>
+        <li>Comparación de varianzas poblacionales.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong>Analizar si existe relación entre el color de ojos y la preferencia por un tipo de música en un grupo de personas.</p>
     <h2>4.8 Distribución F</h2>
+    <p>La distribución F se utiliza para comparar dos varianzas poblacionales. Se caracteriza por sus dos grados de libertad (ν1 y ν2).</p>
+    <p>Propiedades:</p>
+    <ul>
+        <li>La curva de densidad de probabilidad es asimétrica a la derecha.</li>
+        <li>No existe un valor máximo para la distribución.</li>
+        <li>Se utiliza para realizar pruebas de hipótesis sobre la igualdad de varianzas poblacionales.</li>
+    </ul>
+    <p>Aplicaciones:</p>
+    <ul>
+        <li>Comparación de la variabilidad de dos grupos de datos.</li>
+        <li>Evaluación de la efectividad de un tratamiento experimental en comparación con un grupo control.</li>
+        <li>Análisis de experimentos de diseño factorial.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong>Comparar la variabilidad en las calificaciones de matemáticas de dos grupos de estudiantes que recibieron diferentes métodos de enseñanza.</p>
 
 </body>
 </html> 

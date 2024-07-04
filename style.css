@@ -3,25 +3,25 @@ body {
     padding: 0;
     background-color: white; /* Color de fondo */
     font-family: Arial, sans-serif; /* Tipo de fuente */
-    font-size: 50px; /* Tamaño de fuente base */
+    font-size: 30px; /* Tamaño de fuente base */
     color: #333333; /* Color de texto */
 }
 
 /* Estilos para los encabezados */
 h1 {
-    font-size: 90px; /* Tamaño de fuente */
+    font-size: 70px; /* Tamaño de fuente */
     color: #3b3f49; /* Color de texto */
     margin-bottom: 10px; /* Margen inferior */
 }
 
 h2 {
-    font-size: 75px; /* Tamaño de fuente */
+    font-size: 60px; /* Tamaño de fuente */
     color: #f7a29e; /* Color de texto */
     margin-bottom: 10px; /* Margen inferior */
 }
 
 h3 {
-    font-size: 60px; /* Tamaño de fuente */
+    font-size: 50px; /* Tamaño de fuente */
     color: #f3c6b9 ;/* Color de texto */
     margin-bottom: 10px; /* Margen inferior */
 }
