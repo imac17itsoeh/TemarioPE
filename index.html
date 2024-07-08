@@ -267,6 +267,7 @@
     <h3>3.1.1 Distribución de probabilidad en forma general</h3>
     <p>Una variable aleatoria discreta X se define por su función de probabilidad, P(x), que asigna a cada valor posible x de X una probabilidad P(x)≥0, de tal manera que ∑ x∈X P(x)=1, donde X es el conjunto de valores posibles de X.</p>
     <p>La función de probabilidad P(x) puede representarse mediante una tabla de frecuencias o una gráfica de barras.</p>
+    <img src="ProbabilidadDescriptiva.png" class="imagenesFormulas">
     <h3>3.1.2 Valor esperado</h3>
     <p>La media o valor esperado es una medida de localización central de la variable aleatoria. Se calcula de la manera siguiente:</p>
     <img src="valorEsperado.png" class="imagenesFormulas">
@@ -287,7 +288,7 @@
     <p> En estadística, una variable aleatoria continua es aquella que puede tomar infinitos valores dentro de un intervalo real. A diferencia de las variables aleatorias discretas, que solo pueden tomar valores específicos, las variables continuas pueden tomar cualquier valor dentro de un rango definido</p>
     <h3>3.2.1 Distribución de probabilidad en forma general</h3>
     <p>Las variables aleatorias continuas se caracterizan por tener un conjunto infinito no numerable de valores posibles dentro de un intervalo. Su distribución de probabilidad se define mediante una función de densidad de probabilidad, f(x), que asigna a cada valor x en el intervalo de valores posibles X una densidad de probabilidad f(x)≥0, cumpliendo la condición de que la integral de la densidad de probabilidad en todo el intervalo sea igual a 1:</p>
-    <img src="DitricucionDeProbabilidad.png" class="imagenesFormulas">
+    <img src="ProbabilidadDescriptiva.png" class="imagenesFormulas">
     <h3>3.2.2 Valor esperado</h3>
     <p>Es una medida de localización central de la variable aleatoria. Se calcula de la forma siguiente:</p>
     <img src="valorEsperadoContinuas.png" class="imagenesFormulas">
@@ -320,6 +321,8 @@
         <li>Si X es continua, entonces F(b) = 1 para todo b > máximo valor posible de X.</li>
     </ul>
     <p>La función de probabilidad es fundamental para calcular probabilidades de eventos relacionados con la variable aleatoria X.</p>
+   
+   
     <h2>4.2 Distribución binomial</h2>
     <p>La distribución binomial describe la probabilidad de obtener un número específico de "éxitos" en n experimentos independientes, donde cada experimento tiene la misma probabilidad de éxito p. Se utiliza cuando:</p>
     <ul>
@@ -329,12 +332,15 @@
         <li>La probabilidad de éxito en cada experimento es la misma (p).</li>
     </ul>
     <p>La función de probabilidad de la distribución binomial para X = k éxitos en n experimentos es:</p>
-    <p>P(X = k) = nCk * p^k * (1-p)^(n-k)</p>
+    <img src="binomial.png" class="imagenesFormulas">
     <p>Donde:</p><ul>
         <li>nCk es el número de combinaciones de n elementos tomados de k en k.</li>
         <li>p es la probabilidad de éxito en cada experimento.</li>
         <li>(1-p) es la probabilidad de fracaso en cada experimento.</li>
     </ul>
+   <p>¿Cuando usar?</p>
+   <p>Experimentos de Bernoulli con dos resultados posibles</p>
+   
     <h2>4.3 Distribución hipergeométrica</h2>
     <p>La distribución hipergeométrica describe la probabilidad de obtener un número específico de "éxitos" en n experimentos sin reemplazo, donde la población inicial tiene N elementos, de los cuales K son éxitos. Se utiliza cuando:</p>
     <ul>
@@ -345,12 +351,9 @@
         <li>La probabilidad de éxito en cada experimento no es constante (depende del número de éxitos restantes en la población).</li>
     </ul>
     <p>La función de probabilidad de la distribución hipergeométrica para X = k éxitos en una muestra de n elementos es:</p>
-    <p>P(X = k) = (K choose k) * (N-K choose n-k) / (N choose n)</p>
-    <ul>
-        <li>(K choose k) es el número de combinaciones de K elementos tomados de k en k.</li>
-        <li>(N-K choose n-k) es el número de combinaciones de N-K elementos tomados de n-k en n-k.</li>
-        <li>(N choose n) es el número de combinaciones de N elementos tomados de n en n.</li>
-    </ul>
+    <img src="hipergeometrica.png" class="imagenesFormulas">
+    <p>¿Cuando usar?</p>
+   <p>Muestreo sin reemplazo de una población finita</p>
     <h2>4.4 Distribución de Poisson</h2>
     <p>La distribución de Poisson describe la probabilidad de observar un número específico de eventos en un intervalo de tiempo fijo, suponiendo que los eventos ocurren de forma independiente y con una tasa constante. Se utiliza cuando:</p>
     <ul>
@@ -360,12 +363,14 @@
         <li>La tasa de eventos (λ) es constante en el intervalo de tiempo.</li>
     </ul>
     <p>La función de probabilidad de la distribución de Poisson para X = k eventos en un intervalo de tiempo con tasa λ es:</p>
-    <p>P(X = k) = (e^(-λ) * λ^k) / k!</p>
+    <img src="poisson.png" class="imagenesFormulas">
     <ul>
         <li>e es la base del logaritmo natural (aproximadamente 2.718).</li>
         <li>λ es la tasa de eventos en el intervalo de tiempo.</li>
         <li>k! es el factorial de k (k * (k-1) * (k-2) * ... * 1).</li>
     </ul>
+    <p>¿Cuando usar?</p>
+   <p>Modelar eventos raros y discretos en un intervalo de tiempo o espacio</p>
     <h2>4.5 Distribución normal</h2>
     <p>La distribución normal, también conocida como distribución gaussiana, describe la probabilidad de que una variable aleatoria continua X tome un valor dentro de un intervalo específico. Se caracteriza por su media (μ) y su desviación estándar (σ).</p>
     <p>Propiedades:</p>
@@ -375,6 +380,8 @@
         <li>El 95% de los datos se encuentran dentro de un intervalo de 2 desviaciones estándar (μ ± 2σ) de la media.</li>
         <li>El 99.7% de los datos se encuentran dentro de un intervalo de 3 desviaciones estándar (μ ± 3σ) de la media.</li>
     </ul>
+    <p>Formula:</p>
+    <img src="normal.png" class="imagenesFormulas">
     <p>Aplicaciones:</p>
     <ul>
         <li>Análisis de experimentos científicos donde se espera que los datos se distribuyan simétricamente alrededor de un valor central.</li>
@@ -382,6 +389,8 @@
         <li>Inferencia estadística: Estimación de parámetros poblacionales y realización de pruebas de hipótesis.</li>
     </ul>
     <p><strong> Ejemplo:</strong> Medir la altura de 100 estudiantes y analizar si la distribución de las alturas se ajusta a una distribución normal.</p>
+    <p>¿Cuando usar?</p>
+   <p>Modelar datos continuos con una distribución simétricos</p>
     <h2>4.6 Distribución T-student</h2>
     <p>La distribución t-student es similar a la distribución normal, pero se utiliza cuando el tamaño de la muestra es pequeño y la desviación estándar poblacional (σ) es desconocida. Se caracteriza por su grados de libertad (ν) y un parámetro de ubicación (μ).</p>
     <p>Propiedades:</p>
