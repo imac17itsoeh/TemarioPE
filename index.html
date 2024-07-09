@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Estadística descriptiva</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Probabilidad y Estadística </title>
 </head>
 <body>
     <h1>1 Estadística descriptiva</h1>
@@ -320,7 +322,7 @@
         <li>Si X es continua, entonces F(x) es no decreciente y F(a) = 0 para todo a < mínimo valor posible de X.</li>
         <li>Si X es continua, entonces F(b) = 1 para todo b > máximo valor posible de X.</li>
     </ul>
-    <p>La función de probabilidad es fundamental para calcular probabilidades de eventos relacionados con la variable aleatoria X.</p>
+    <p>La función de probabilidad es fundamental para calcular probabilidades de eventos relacionados con la variable aleatoria X. Su formula es: \( P(X = x_i) = p_i \) con \( \sum p_i = 1 \).</p>
    
    
     <h2>4.2 Distribución binomial</h2>
@@ -336,6 +338,8 @@
     <p>Donde:</p><ul>
         <li>nCk es el número de combinaciones de n elementos tomados de k en k.</li>
         <li>p es la probabilidad de éxito en cada experimento.</li>
+        <li>n: Número de ensayos</li>
+        <li>k: Número de éxitos deseados</li>
         <li>(1-p) es la probabilidad de fracaso en cada experimento.</li>
     </ul>
    <p>¿Cuando usar?</p>
@@ -352,6 +356,14 @@
     </ul>
     <p>La función de probabilidad de la distribución hipergeométrica para X = k éxitos en una muestra de n elementos es:</p>
     <img src="hipergeometrica.png" class="imagenesFormulas">
+    <p>Donde:</p>
+    <ul>
+        <li>N: tamaño de la población</li>
+        <li>K: número de éxitos en la población</li>
+        <li>n: tamaño de la muestra</li>
+        <li>k: número de éxitos en la muestra</li>
+        <li>\(\binom{a}{b}\): coeficiente binomial</li>
+    </ul>
     <p>¿Cuando usar?</p>
    <p>Muestreo sin reemplazo de una población finita</p>
     <h2>4.4 Distribución de Poisson</h2>
@@ -364,11 +376,16 @@
     </ul>
     <p>La función de probabilidad de la distribución de Poisson para X = k eventos en un intervalo de tiempo con tasa λ es:</p>
     <img src="poisson.png" class="imagenesFormulas">
+    <p>Donde: </p>
     <ul>
-        <li>e es la base del logaritmo natural (aproximadamente 2.718).</li>
-        <li>λ es la tasa de eventos en el intervalo de tiempo.</li>
-        <li>k! es el factorial de k (k * (k-1) * (k-2) * ... * 1).</li>
+        <li>\(\lambda\): tasa promedio de ocurrencia de eventos</li>
+        <li>k: número de eventos observados</li>
+        <li>e: base del logaritmo natural</li>
+        <li>k!: factorial de \( k \)</li>
     </ul>
+    <p>Su media se calcula como: <br>
+        \(\lambda\) <br> Y su varianza como: <br>
+    \(\lambda\)</p>
     <p>¿Cuando usar?</p>
    <p>Modelar eventos raros y discretos en un intervalo de tiempo o espacio</p>
     <h2>4.5 Distribución normal</h2>
@@ -382,6 +399,15 @@
     </ul>
     <p>Formula:</p>
     <img src="normal.png" class="imagenesFormulas">
+    <p>Donde: 
+        </p>
+        <ul>
+            <li>\(\mu\): media de la distribución</li>
+            <li>\(\sigma\): desviación estándar</li>
+            <li>x: valor de la variable aleatoria</li>
+            <li>e: base del logaritmo natural</li>
+            <li>\(\pi\): constante pi</li>
+        </ul>
     <p>Aplicaciones:</p>
     <ul>
         <li>Análisis de experimentos científicos donde se espera que los datos se distribuyan simétricamente alrededor de un valor central.</li>
@@ -391,13 +417,25 @@
     <p><strong> Ejemplo:</strong> Medir la altura de 100 estudiantes y analizar si la distribución de las alturas se ajusta a una distribución normal.</p>
     <p>¿Cuando usar?</p>
    <p>Modelar datos continuos con una distribución simétricos</p>
-    <h2>4.6 Distribución T-student</h2>
+    
+   
+   <h2>4.6 Distribución T-student</h2>
     <p>La distribución t-student es similar a la distribución normal, pero se utiliza cuando el tamaño de la muestra es pequeño y la desviación estándar poblacional (σ) es desconocida. Se caracteriza por su grados de libertad (ν) y un parámetro de ubicación (μ).</p>
     <p>Propiedades:</p>
     <ul>
         <li>La forma de la distribución depende de los grados de libertad (ν).</li>
         <li>Para grados de libertad altos, se aproxima a la distribución normal.</li>
         <li>Se utiliza para realizar inferencia estadística cuando la σ es desconocida y el tamaño de la muestra es pequeño.</li>
+    </ul>
+    <p>Su formula es: <br>
+        \( f(t) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\sqrt{\nu \pi} \Gamma\left(\frac{\nu}{2}\right)} \left(1 + \frac{t^2}{\nu}\right)^{-\frac{\nu+1}{2}} \) <br>
+        Donde: 
+    </p>
+    <ul>
+        <li>t: valor de la variable aleatoria</li>
+        <li>\(\nu\): grados de libertad</li>
+        <li>\(\Gamma\): función gamma</li>
+        <li>\(\pi\): constante pi</li>
     </ul>
     <p>Aplicaciones:</p>
     <ul>
@@ -414,6 +452,14 @@
         <li>No existe un valor máximo para la distribución.</li>
         <li>Se utiliza para realizar pruebas de hipótesis sobre la independencia entre dos variables categóricas.</li>
     </ul>
+    <p>Su formula es: <br>
+        \( X = \sum_{i=1}^{k} Z_i^2 \) <br>
+        Donde: 
+    </p>
+    <ul>
+        <li>\(Z_i\): variables aleatorias normales estándar</li>
+        <li>k: grados de libertad</li>
+    </ul>
     <p>Aplicaciones:</p>
     <ul>
         <li>Análisis de tablas de contingencia para verificar si existe asociación entre dos variables categóricas.</li>
@@ -429,6 +475,16 @@
         <li>No existe un valor máximo para la distribución.</li>
         <li>Se utiliza para realizar pruebas de hipótesis sobre la igualdad de varianzas poblacionales.</li>
     </ul>
+    <p>Su formula es: <br>
+        \( F = \frac{(U/d_1)}{(V/d_2)} \) <br>
+        Donde: 
+    </p>
+    <ul>
+        <li>U: variable aleatoria Chi-cuadrada con \( d_1 \) grados de libertad</li>
+        <li>V: variable aleatoria Chi-cuadrada con \( d_2 \) grados de libertad</li>
+        <li>d_1: grados de libertad del numerador</li>
+        <li>d_2: grados de libertad del denominador</li>
+    </ul>
     <p>Aplicaciones:</p>
     <ul>
         <li>Comparación de la variabilidad de dos grupos de datos.</li>
@@ -437,5 +493,47 @@
     </ul>
     <p><strong>Ejemplo:</strong>Comparar la variabilidad en las calificaciones de matemáticas de dos grupos de estudiantes que recibieron diferentes métodos de enseñanza.</p>
 
+
+
+
+    <h1>5.1 Regresión y correlación</h1>
+    
+    <h2>5.1.1 Diagrama de dispersión</h2>
+    <p>Un diagrama de dispersión, también conocido como gráfico de dispersión o gráfico de correlación, es una representación gráfica de dos variables para un conjunto de datos. En este gráfico, se ubican los puntos de datos en un plano cartesiano, donde cada punto representa el valor de una variable en el eje X y el valor de la otra variable en el eje Y</p>
+    <p>El patrón de los puntos en un diagrama de dispersión puede proporcionar información valiosa sobre la relación entre las dos variables. Si los puntos están distribuidos aleatoriamente sin una tendencia aparente, se puede inferir que no existe una relación lineal entre las variables. Por otro lado, si los puntos tienden a seguir una línea recta o una curva, se puede inferir que existe una relación lineal o curvilínea entre las variables, respectivamente.</p>
+    <h2>5.1.2 Regresión lineal simple</h2>
+    <p>La regresión lineal simple es un método estadístico para modelar la relación entre una variable dependiente (Y) y una variable independiente (X) mediante una ecuación lineal. La forma general de la ecuación es:</p>
+    <p>Y=β0 + β1 * X+ϵ</p>
+    <p>Donde:</p>
+    <ul>
+        <li>Y es la variable dependiente.</li>
+        <li>X es la variable independiente.</li>
+        <li>β0 y  β1 son los coeficientes de la regresión que se estiman a partir de los datos.</li>
+        <li>ϵ es el término de error, que representa la variabilidad no explicada por la relación lineal.</li>
+    </ul>
+    <h2>5.1.3 Correlación</h2>
+    <p>La correlación es una medida de la fuerza y la dirección de la relación entre dos variables. Se expresa mediante un coeficiente de correlación, que puede tomar valores entre -1 y 1.</p>
+    <ul>
+        <li>Un coeficiente de correlación de 0 indica que no existe correlación entre las variables.</li>
+        <li>Un coeficiente de correlación positivo indica que las variables están correlacionadas positivamente, es decir, que a medida que aumenta el valor de una variable, también aumenta el valor de la otra variable.</li>
+        <li>Un coeficiente de correlación negativo indica que las variables están correlacionadas negativamente, es decir, que a medida que aumenta el valor de una variable, disminuye el valor de la otra variable.</li>
+    </ul>
+    <h2>5.1.4 Determinación y análisis de los coeficientes de correlación y de determinación</h2>
+    <p><strong>Coeficiente de correlación  𝑟:</strong>  Calcula la intensidad y la dirección de la relación entre dos variables. El coeficiente de correlación, como se mencionó anteriormente, mide la fuerza y la dirección de la relación entre dos variables. Su interpretación debe hacerse con cautela, ya que no implica necesariamente una relación causal entre las variables.
+ </p>
+ <p><strong>Coeficiente de determinación R ^ 2 : </strong> Indica la proporción de la varianza de la variable dependiente que es predecible a partir de la variable independiente. Se interpreta como el porcentaje de la variabilidad de  𝑌 que es explicada por  𝑋.  El coeficiente de determinación, también conocido como R², indica la proporción de la variabilidad total de la variable dependiente que puede explicarse por la variable independiente. Se calcula como el cuadrado del coeficiente de correlación. Un valor de R² cercano a 1 indica que la variable independiente explica una gran parte de la variabilidad de la variable dependiente, mientras que un valor cercano a 0 indica que la variable independiente explica una pequeña parte de la variabilidad de la variable dependiente.
+</p>
+    <h2>5.1.5 Distribución normal bidimensional</h2>
+    <p>La distribución normal bidimensional es una distribución de probabilidad conjunta de dos variables aleatorias. Esta distribución se caracteriza por tener una forma de campana en ambas dimensiones.</p>
+    <p>En el contexto de la regresión lineal, la distribución normal bidimensional es importante porque se asume que los errores aleatorios (ε) en la ecuación de regresión siguen una distribución normal bidimensional con media 0 y varianza constante.</p>
+    <h2>5.1.6 Intervalos de confianza y pruebas para el coeficiente de correlación</h2>
+    <p>Para evaluar la significancia del coeficiente de correlación  r:</p>
+    <ul>
+        <li>Intervalos de confianza: Los intervalos de confianza para el coeficiente de correlación proporcionan un rango de valores dentro del cual es probable que se encuentre el valor verdadero de la población. Se calculan utilizando la distribución t de Student.</li>
+        <li>Pruebas de hipótesis: Las pruebas de hipótesis se utilizan para determinar si el valor observado del coeficiente de correlación es estadísticamente significativo, es decir, si es diferente de 0. La prueba más común para el coeficiente de correlación es la prueba t de Student.</li>
+    </ul>
+    <h2>5.1.7 Errores de medición</h2>
+    <p>Los errores de medición son discrepancias entre el valor medido de una variable y su valor verdadero. En el contexto de regresión y correlación, los errores de medición pueden introducir sesgos y reducir la precisión de los resultados. Estrategias como la validación cruzada y el análisis de residuos ayudan a identificar y mitigar estos errores.</p>
+   <p>Estos conceptos forman la base de la comprensión y el análisis de la relación entre variables cuantitativas en estadística, proporcionando herramientas para modelar y entender datos en diversos campos de estudio.</p> 
 </body>
 </html> 
